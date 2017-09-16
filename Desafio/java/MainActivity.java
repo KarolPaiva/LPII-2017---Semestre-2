@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(it);
     }
 
-    public void salvar_lista(View v){
+    public void salvar(View v){
       
         EditText nome = (EditText)findViewById(R.id.inputNome);
         String nome = nome.getText().toString();
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         if(nome.compareTo("")!=0){
             if(telefone.compareTo("")!=0){
                 if(idade_string.compareTo("")!=0){
-                    int idade = Integer.parseInt(idade_s.getText().toString());
+                    int idade = Integer.parseInt(idade.getText().toString());
                     lista.add(new Pessoa(nome, telefone, idade));
 
                     nome_s.setText("");
